@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  const parent = {
+    first: 'muhammad',
+    second: 'name',
+    child:  {
+      first: 'ahmad',
+      second: 'muhammad',
+     },
+
+     family: function fam(){
+      console.log('function inside object');
+  }
+};
+
+console.log(JSON.stringify(parent));
+console.log(parent);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+     <button onclick="
+     upadteCalculation('1');
+     ">1</button>
+     <button onclick="
+     upadteCalculation('2');
+     ">2</button>
+     <button onclick="
+     upadteCalculation('3');
+    ">3</button>
+    <button onclick="
+    upadteCalculation('+')
+    ">+</button>
+  <p>
+  <p>
+    <button onclick="
+    upadteCalculation('4');
+    ">4</button>
+    <button onclick="
+    upadteCalculation('5');
+    ">5</button>
+    <button onclick="
+    upadteCalculation('6');
+    ">6</button>
+    <button onclick="
+    upadteCalculation('-');
+    ">-</button>
+    
+  <p>
+  <p>
+    <button onclick="
+    upadteCalculation('7');
+    ">7</button>
+    <button onclick="
+    upadteCalculation('8');
+    ">8</button>
+    <button onclick="
+    upadteCalculation('9');
+    ">9</button>
+    <button onclick="
+    upadteCalculation('*')
+    ">*</button>
+  <p>
+    <button onclick="
+    upadteCalculation('0')
+    ">0</button>
+    <button onclick="
+    upadteCalculation('.')
+    ">.</button>
+    <button onclick="
+    // Note: eval() takes a string and runs it as code.
+    // Avoid using eval() in real world projects since
+    // it can potentially be given harmful code to run.
+    // Only use eval() for learning purposes.
+  calculation = eval(calculation);
+  console.log('calculation');
+  ">=</button>
+  <button onclick="
+  upadteCalculation('/')
+  ">/</button>
+   </p>
+  <p>
+    <button onclick="
+    calculation = '';
+    console.log(calculation);
+    ">clear</button>
+  </p>
+  <script>
+    let calculation = '';
+    function upadteCalculation(value){
+      calculation += value;
+      // Display the calculation on the page
+      // instead of console.log
+      displayCalculation();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function doubleArray(nums){
+    
+    const sum = [];
+    for (let i = 0; i < nums.length; i++){
+         const num = nums[i];
+         if (num === 0){
+          return sum;
+         }
+         sum.push(num * 2);
+    }
+    return sum;
+  }
+  console.log(doubleArray([1,2,3, 0, 5]));
+  </script>
+  
+</body>
+</html>
