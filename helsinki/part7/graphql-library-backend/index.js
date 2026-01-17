@@ -96,7 +96,8 @@ const start = async () => {
   httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server ready at http://localhost:${PORT}/graphql`)
     console.log(`🏠 Root redirected to Sandbox: http://localhost:${PORT}/`)
-    console.log(`📡 On EC2, use your Public IP: http://your-ec2-ip:${PORT}/`)
+   
+console.log(`📡 On EC2, use your Public IP: http://${process.env.PUBLIC_IP}:${process.env.PORT}/`)
   })
 }
 
