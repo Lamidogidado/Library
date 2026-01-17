@@ -1,0 +1,37 @@
+# Get all persons
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+###
+
+# Get one person (replace <id> with actual MongoDB _id)
+GET http://localhost:3001/api/persons/<id>
+Accept: application/json
+
+###
+
+# Add a new person
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "alkskwdkfk",
+  "number": "123"
+}
+
+###
+
+# Update a person (replace <id> with actual _id)
+PUT http://localhost:3001/api/persons/693461acbb50b9158385a5c7
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "number": "321-9876543"
+}
+
+###
+
+# Delete a
+
+

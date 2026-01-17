@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules
+
+# Frontend Build Directory (Vite default is 'dist' inside 'note/')
+/note/dist
+
+# Configuration and Environment Files
+.env
+.env.local
+.env.*.local
+
+# Log and Debug Files
+npm-debug.log
+yarn-error.log
+
+# Operating System Files
+.DS_Store
+
+# Editor Configuration (Optional, but recommended for clean repo)
+.vscode/
+server-phonebook/.env

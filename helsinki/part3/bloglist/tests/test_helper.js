@@ -1,0 +1,44 @@
+// tests/test_helper.js
+const User = require('../models/user')
+const Blog = require('../models/blog')
+const bcrypt = require('bcryptjs')
+
+const initialBlogs = [
+  {
+    title: 'React patterns',
+    author: 'Michael Chan',
+    url: 'https://reactpatterns.com/',
+    likes: 7
+  },
+  {
+    title: 'Go To Statement Considered Harmful',
+    author: 'Edsger W. Dijkstra',
+    url:
+      'http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html',
+    likes: 5
+  }
+]
+
+const usersInDb = async () => {
+  const users = await User.find({})
+  return users.map(u => u.toJSON())
+}
+
+const blogsInDb = async () => {
+  const blogs = await Blog.find({})
+  return blogs.map(b => b.toJSON())
+}
+
+const createUser = async (username = 'root', password = 'sekret') => {
+  const saltRounds = 10
+  const passwordHash = await bcrypt.hash(password, saltRounds)
+  const user = new User({ username, name: username, passwordHash })
+  return user.save()
+}
+
+module.exports = {
+  initialBlogs,
+  usersInDb,
+  blogsInDb,
+  createUser
+}
